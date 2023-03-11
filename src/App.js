@@ -2,7 +2,10 @@ import Landing from "./components/landing/landing";
 
 function App() {
   return (
-    <Landing />
+    <div id="background">
+      <img src="/open-ai.jpg" alt="Open AI"></img>
+      <Landing />
+    </div>
   );
 }
 
