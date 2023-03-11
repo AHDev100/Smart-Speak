@@ -1,8 +1,8 @@
+import Landing from "./components/landing/landing";
+
 function App() {
   return (
-    <div>
-      <code>Hello World</code>
-    </div>
+    <Landing />
   );
 }
 

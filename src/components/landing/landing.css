@@ -1,0 +1,90 @@
+.title{
+    color: aliceblue;
+}
+
+.btn-container{
+    margin-top: 70vh;
+    display: flex;
+    flex-direction: row;
+    gap: 1.5rem;
+    justify-content: center;
+}
+
+i {
+    padding-left: 15px;
+    color: white;
+    transition: transform 0.3s ease-in-out;
+}
+
+i:hover{
+    transform: scale(1.6);
+}
+
+.btn-container button {
+    position: relative;
+    width: 200px;
+    height: 75px;
+    display: inline-block;
+    background: #fff;
+    margin: 20px;
+    font-size: large;
+}
+
+.btn-container button::before, 
+.btn-container button::after{
+    content: '';
+    position: absolute;
+    inset: 0;
+    background: #f00;
+    transition: 0.5s;
+}
+
+.btn-container button:nth-child(1)::before,
+.btn-container button:nth-child(1)::after {
+    background: linear-gradient(45deg, #00ccff, #0e1538, #d400d4);
+}
+
+.btn-container button:nth-child(2)::before,
+.btn-container button:nth-child(2)::after {
+    background: linear-gradient(45deg, #ff075b, #0e1538, #1aff22);
+}
+
+.btn-container button:hover::before{
+    inset: -3px;
+}
+
+.btn-container button:hover::after{
+    inset: -3px;
+    filter: blur(10px);
+}
+
+.btn-container button span{
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: inline-block;
+    background: #0e1538;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font: 1.2em;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+    color: #fff;
+    border: 3px solid #040a29;
+    overflow: hidden;
+}
+
+.btn-container button span::before{
+   content: '';
+   position: absolute;
+   top: 0;
+   left: -50%;
+   width: 100%;
+   height: 100%;
+   background: rgba(255, 255, 255, 0.075);
+   transform: skew(25deg);
+}
