@@ -3,7 +3,7 @@
 }
 
 .btn-container{
-    margin-top: 46vh;
+    margin-top: 47.5vh;
     display: flex;
     flex-direction: row;
     gap: 3rem;
@@ -70,7 +70,7 @@ i:hover{
 
 .btn-container button:hover::after{
     inset: -3px;
-    filter: blur(10px);
+    filter: blur(25px);
 }
 
 .btn-container button span{
@@ -88,7 +88,7 @@ i:hover{
     font: 1em;
     text-transform: uppercase;
     letter-spacing: 2px;
-    color:rgba(231, 22, 22, 0.942);
+    color:rgba(5, 255, 251, 0.942);
     border: 2px solid #fff;
     overflow: hidden;
 }

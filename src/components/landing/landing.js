@@ -4,6 +4,9 @@ const landing = () =>{
     
     return (
         <div>
+            <div className="Title">
+                <h1>Smart Speak</h1>
+            </div>
             <div className="btn-container">
                 <button onClick={console.log('Gay')}>
                     <span>Voice GPT<i className="fas fa-microphone"></i></span>
