@@ -1,0 +1,45 @@
+body {
+    margin: 0; /* This will stop the margin, setting it to 0 */
+}
+  
+.menu {
+    width: 13.5vw;
+    height: 100vh;
+    background: rgb(30, 32, 35);
+    float: left;
+}
+  
+.interface {
+    width: 100vw;
+    height: 100vh;
+    background: rgb(52, 53, 65); 
+}
+
+.new-chat{
+    background: transparent;
+    color: antiquewhite;
+    border: 2px solid rgb(52, 53, 65);
+    width: 235px;
+    height: 50px;
+    border-radius: 7px;
+    margin-left: 0.5vw;
+    margin-top: 1vh;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    text-align: left;
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+i {
+    padding-right: 10px;
+}
+
+.new-chat:hover{
+    background-color: gray;
+}
+
+.chat-input {
+    margin-top: 90vh;
+    margin-left: 40vw;
+}

@@ -1,24 +1,28 @@
-import "./landing.css"; 
+import "./interface.css"; 
 
-const landing = () =>{
+const Interface = () =>{
+
+    const handleInput = () => {
+        alert('Input Sent')
+    }
     
+    const openConversation = () => {
+        alert('HA'); 
+    }
+
     return (
-        <div>
-            <div className="Title">
-                <h1>Smart Speak</h1>
+        <>
+            <div className="menu">
+                <button className="new-chat" onClick={openConversation}>
+                    <i className="fa fa-plus"></i> New Chat
+                </button>    
             </div>
-            <div className="btn-container">
-                <button onClick={console.log('Gay')}>
-                    <span>Voice GPT<i className="fas fa-microphone"></i></span>
-                </button>
-                <i className="fa fa-info-circle info-1"></i>
-                <button>
-                    <span>Chat GPT<i className="fas fa-comment"></i></span>
-                </button>
-                <i className="fa fa-info-circle info-2"></i>  
+            <div className="interface">
+                <input className="chat-input"></input>
+                <button onClick={handleInput}></button>
             </div>
-        </div>
+        </>
     )
 }
 
-export default landing; 
+export default Interface; 

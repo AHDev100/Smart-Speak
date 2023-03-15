@@ -1,11 +1,10 @@
-import Landing from "./components/landing/landing";
+import Interface from "./components/landing/landing";
 
 function App() {
   return (
-    <div id="background">
-      <img src="/open-ai.jpg" alt="Open AI"></img>
-      <Landing />
-    </div>
+    <>
+      <Interface />      
+    </>
   );
 }
 
