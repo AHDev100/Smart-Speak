@@ -4,12 +4,14 @@ import ChatLog from "./chatlog";
 
 const Interface = () =>{
     const [message, setMessage] = useState(''); 
+    const [messageLog, setMessages] = useState([]); 
 
     const addMessage = (event) => {
         event.preventDefault();
         if (message.trim() !== '') {
           try {
-            alert(`${message}`);
+            setMessages([...messageLog, message]); 
+            setMessage(''); 
           } catch (error) {
             //Do nothing if no message is entered
           }
@@ -28,7 +30,11 @@ const Interface = () =>{
                 </button>    
             </div>
             <div className="interface">
-                <ChatLog message={message}/>
+                {messageLog.map((message => 
+                        <div>
+                            <ChatLog message={message} />
+                        </div>
+                ))}
                 <form onSubmit={addMessage}>
                     <textarea className="chat-input" value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
                     <button type="submit" className="btn">
