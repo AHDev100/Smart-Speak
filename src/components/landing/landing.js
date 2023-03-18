@@ -1,10 +1,20 @@
-import "./interface.css"; 
+import "./landing.css"; 
+import { useState } from 'react'; 
+import ChatLog from "./chatlog";
 
 const Interface = () =>{
+    const [message, setMessage] = useState(''); 
 
-    const handleInput = () => {
-        alert('Input Sent')
-    }
+    const addMessage = (event) => {
+        event.preventDefault();
+        if (message.trim() !== '') {
+          try {
+            alert(`${message}`);
+          } catch (error) {
+            //Do nothing if no message is entered
+          }
+        }
+      }
     
     const openConversation = () => {
         alert('HA'); 
@@ -18,8 +28,13 @@ const Interface = () =>{
                 </button>    
             </div>
             <div className="interface">
-                <input className="chat-input"></input>
-                <button onClick={handleInput}></button>
+                <ChatLog message={message}/>
+                <form onSubmit={addMessage}>
+                    <textarea className="chat-input" value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
+                    <button type="submit" className="btn">
+                        Send
+                    </button>
+                </form>
             </div>
         </>
     )
