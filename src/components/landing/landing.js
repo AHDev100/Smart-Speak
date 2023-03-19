@@ -1,16 +1,18 @@
 import "./landing.css"; 
 import { useState } from 'react'; 
-import ChatLog from "./chatlog";
+import ChatQuestion from "./chatquestion";
+import ChatResponse from "./response";
 
 const Interface = () =>{
     const [message, setMessage] = useState(''); 
     const [messageLog, setMessages] = useState([]); 
+    //const [answer, setAnswer] = useState(''); 
 
     const addMessage = (event) => {
         event.preventDefault();
         if (message.trim() !== '') {
           try {
-            setMessages([...messageLog, message]); 
+            setMessages([...messageLog, message]); //Adds new message to message log using spread operator (for existing messages, if any)
             setMessage(''); 
           } catch (error) {
             //Do nothing if no message is entered
@@ -19,7 +21,7 @@ const Interface = () =>{
       }
     
     const openConversation = () => {
-        alert('HA'); 
+        alert('Erm.... feature not avaialable yet, sorry :('); 
     }
 
     return (
@@ -30,11 +32,12 @@ const Interface = () =>{
                 </button>    
             </div>
             <div className="interface">
-                {messageLog.map((message => 
-                        <div>
-                            <ChatLog message={message} />
+                {messageLog.map((message, index) => 
+                        <div key={index}>
+                            <ChatQuestion message={message} />
+                            <ChatResponse question={message}/>
                         </div>
-                ))}
+                )}
                 <form onSubmit={addMessage}>
                     <textarea className="chat-input" value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
                     <button type="submit" className="btn">

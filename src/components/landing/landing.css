@@ -47,10 +47,11 @@ textarea {
     outline: none;
     color: aliceblue;
     margin-left: 150px;
-    margin-top: 90vh;
+    margin-bottom: 3rem;
     font-size: medium;
     box-shadow: 0px 0px 10px rgba(215, 193, 193, 0.1);
     position: absolute;
+    bottom: 1rem;
 }
 
 .btn {
