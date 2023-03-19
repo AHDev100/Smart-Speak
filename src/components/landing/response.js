@@ -2,6 +2,7 @@ import { useState, useEffect } from 'react';
 
 const ChatResponse = (props) => {
     const [response, setResponse] = useState('');
+    const { question } = props; 
     
     useEffect(() => {
         const generateResponse = async (q) => {
@@ -13,11 +14,11 @@ const ChatResponse = (props) => {
                 },
                 body: JSON.stringify({prompt : q}),
             })
-            const answer = await response.json(); 
-            setResponse(answer.answer); 
+            const answer = await response.json();
+            setResponse(answer.answer.text); 
         }
-        generateResponse(props.question);
-    }, [props.question]);
+        generateResponse(question);
+    }, [question]);
 
     return (
         <div className="response">
