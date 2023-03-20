@@ -1,4 +1,6 @@
 import { useState, useEffect } from 'react';
+import "./response.css"; 
+import ReactTyped from 'react-typed';
 
 const ChatResponse = (props) => {
     const [response, setResponse] = useState('');
