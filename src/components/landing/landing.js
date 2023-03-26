@@ -1,12 +1,11 @@
 import "./landing.css"; 
 import { useState } from 'react'; 
-import ChatQuestion from "./chatquestion";
-import ChatResponse from "./response";
+import ChatQuestion from "../question/chatquestion";
+import ChatResponse from "../response/response";
 
 const Interface = () =>{
     const [message, setMessage] = useState(''); 
     const [messageLog, setMessages] = useState([]); 
-    //const [answer, setAnswer] = useState(''); 
 
     const addMessage = (event) => {
         event.preventDefault();
@@ -25,7 +24,7 @@ const Interface = () =>{
     }
 
     return (
-        <>
+        <div className="container">
             <div className="menu">
                 <button className="new-chat" onClick={openConversation}>
                     <i className="fa fa-plus"></i> New Chat
@@ -39,13 +38,13 @@ const Interface = () =>{
                         </div>
                 )}
                 <form onSubmit={addMessage}>
-                    <textarea className="chat-input" value={message} onChange={(e)=>setMessage(e.target.value)}></textarea>
+                    <textarea className="chat-input" value={message} onChange={(e)=>setMessage(e.target.value)} style={{ fontFamily: 'Arial' }}></textarea>
                     <button type="submit" className="btn">
                         Send
                     </button>
                 </form>
             </div>
-        </>
+        </div>
     )
 }
 

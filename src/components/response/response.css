@@ -1,0 +1,49 @@
+.response {
+    background-color: rgb(68, 70, 84);
+    color: white;
+    text-align: left;
+    padding-left: 20vw;
+    min-height: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 4;
+    white-space: pre-wrap;
+    transform: translate(0);
+    padding-bottom: 2%;
+}
+
+.text {
+    display: flex;
+    flex-direction: column;
+    gap: 0.25rem;
+    margin-right: -0.25rem;
+    margin-left: -0.25rem;
+  }
+  
+  .text > * {
+    margin-right: 0.25rem;
+    margin-left: 0.25rem;
+  }
+  
+  .text > :not(:first-child) {
+    margin-top: 0.25rem;
+  }
+  
+  .text > :not(:last-child) {
+    margin-bottom: 0.25rem;
+  }
+  
+  @media (min-width: 768px) {
+    .text {
+      gap: 0.75rem;
+      margin-right: -0.375rem;
+      margin-left: -0.375rem;
+    }
+    
+    .text > * {
+      margin-right: 0.375rem;
+      margin-left: 0.375rem;
+    }
+  }
+  

@@ -1,6 +1,5 @@
 import { useState, useEffect } from 'react';
 import "./response.css"; 
-import ReactTyped from 'react-typed';
 
 const ChatResponse = (props) => {
     const [response, setResponse] = useState('');
@@ -24,7 +23,7 @@ const ChatResponse = (props) => {
 
     return (
         <div className="response">
-            {response}
+            <span className='text' style={{ fontFamily: 'Arial' }}>{response}</span>
         </div>
     )
 }

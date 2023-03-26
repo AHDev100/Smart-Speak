@@ -13,6 +13,7 @@ body {
     width: 100vw;
     height: 100vh;
     background: rgb(52, 53, 65); 
+    flex: 1;
 }
 
 .new-chat{
@@ -58,4 +59,9 @@ textarea {
     top: 90vh;
     position: absolute;
     right: 110px;
+}
+
+.container {
+    flex: 1;
+    overflow: hidden;
 }
