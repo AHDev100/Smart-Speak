@@ -1,7 +1,7 @@
 import "./landing.css"; 
 import { useState } from 'react'; 
-import ChatQuestion from "../question/chatquestion";
-import ChatResponse from "../response/response";
+import ChatQuestion from "../../components/question/chatquestion";
+import ChatResponse from "../../components/response/response";
 
 const Interface = () =>{
     const [message, setMessage] = useState(''); 
@@ -30,7 +30,7 @@ const Interface = () =>{
             addMessage(event); 
         }
     }; 
-
+    
     return (
         <div className="container">
             <div className="menu">
