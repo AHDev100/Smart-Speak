@@ -1,0 +1,29 @@
+* {
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+nav{
+    list-style: none;
+    margin: -40px;
+    text-align: center;
+    background: linear-gradient(90deg, rgba(115,124,131,1) 100%, rgba(107,77,126,1) 100%);
+}
+
+nav li{
+    display: inline;
+}
+
+nav a{
+    display: inline-block;
+    padding: 10px;
+    text-decoration: none;
+}
+
+h3{
+    color: white;
+    transition: 0.5 ease-in-out;
+}
+
+h3:hover{
+    color: blue;
+}

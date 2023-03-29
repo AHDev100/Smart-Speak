@@ -1,11 +1,17 @@
 import './voice.css'; 
+import { useState } from 'react';
+import ChatQuestion from "../../components/question/chatquestion";
+import ChatResponse from "../../components/response/response";
 
 const Voice = () => {
+    const message = 'Buddy boi'; 
     return (
         <div>
-            <h1 className="title">HELP ME</h1>
+            <form>
+                <textarea value={message} />
+            </form>
         </div>
-    ); 
+    )
 }; 
 
 export default Voice; 
