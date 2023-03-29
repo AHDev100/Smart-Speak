@@ -27,7 +27,7 @@ app.post('/', async (req, res) => {
     const answer = response.data.choices[0]; 
     res.status(200).json({answer}); 
   }
-)
+); 
 
 app.listen(PORT, () => {
     console.log(`Server is listening on port ${PORT}`); 
