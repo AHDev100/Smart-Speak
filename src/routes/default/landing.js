@@ -17,7 +17,7 @@ const Interface = () =>{
             //Do nothing if no message is entered
           }
         }
-      }
+    }
     
     const openConversation = () => {
         //Feature Not Supported Yet

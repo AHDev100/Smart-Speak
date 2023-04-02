@@ -1,5 +1,5 @@
 import './voice.css'; 
-import MyComponent from './joe';
+import MyComponent from './dictaphone';
 
 const Voice = () => {
 
