@@ -3,7 +3,7 @@ import SpeechRecognition, { useSpeechRecognition } from 'react-speech-recognitio
 import ChatQuestion from '../../components/question/chatquestion'
 import ChatResponse from '../../components/response/response'
 
-function MyComponent() {
+const Dictaphone = () => {
   const { transcript, resetTranscript } = useSpeechRecognition();
   const [messageLog, setMessages] = useState([]); 
 
@@ -51,4 +51,4 @@ function MyComponent() {
   );
 }
 
-export default MyComponent;
+export default Dictaphone;

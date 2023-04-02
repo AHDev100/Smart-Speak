@@ -1,11 +1,11 @@
 import './voice.css'; 
-import MyComponent from './dictaphone';
+import Dictaphone from './dictaphone';
 
 const Voice = () => {
 
     return (
         <>
-            <MyComponent />
+            <Dictaphone />
         </>
     )
 }; 
