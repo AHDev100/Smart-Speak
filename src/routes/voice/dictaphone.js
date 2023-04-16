@@ -5,7 +5,7 @@ import ChatResponse from '../../components/response/response'
 
 const Dictaphone = () => {
   const { transcript, resetTranscript } = useSpeechRecognition();
-  const [messageLog, setMessages] = useState([]); 
+  const [messageLog, setMessages] = useState([]);
 
   const handleStart = () => {
     alert('Start speaking.... quick!')
@@ -17,9 +17,9 @@ const Dictaphone = () => {
   };
 
   const handleSubmit = () => {
-      setMessages([...messageLog, transcript]); 
-      alert('Submitted!');
-      resetTranscript();
+    setMessages([...messageLog, transcript]); 
+    alert('Submitted!');
+    resetTranscript();
   };
 
   const openConversation = () => {
@@ -27,13 +27,19 @@ const Dictaphone = () => {
     alert('Erm.... feature not avaialable yet, sorry :('); 
   }
 
-  console.log(transcript); 
+  const handleDelete = (index) => {
+      setMessages((prevMessages) => {
+        const newMessages = [...prevMessages];
+        newMessages.splice(index, 1);
+        return newMessages;
+      });
+  };
 
   return (
     <div className="container">
       <div className="menu">
           <button className="new-chat" onClick={openConversation}>
-              <i className="fa fa-plus"></i> New Chat
+              <i className="fa fa-plus"></i> New Chat/Save Previous
           </button>   
           <button onClick={handleStart}>Start Talking</button>
           <button onClick={handleStop}>Stop Talking</button>
@@ -42,7 +48,12 @@ const Dictaphone = () => {
       <div className="interface">
           {messageLog.map((message, index) => 
             <div key={index}>
-              <ChatQuestion message={message} />
+              <div className='delete'>
+                <ChatQuestion message={message} />
+                <button onClick={handleDelete}>
+                  Delete <i className='fa fa-trash'></i>
+                </button>
+              </div>
               <ChatResponse question={message}/>
             </div>
           )}

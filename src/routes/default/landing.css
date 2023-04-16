@@ -29,7 +29,7 @@ body {
     transition: background-color 0.2s ease-in-out;
     text-align: left;
     padding-left: 15px;
-    font-size: 15px;
+    font-size: 14px;
 }
 
 i {
@@ -64,4 +64,50 @@ textarea {
     background-color: transparent;
     right: 170px;
     margin-bottom: 3.5rem;
+}
+
+.chat-question-container {
+    display: flex;
+    align-items: center;
+}
+  
+.chat-question {
+    flex: 1;
+}
+  
+.delete-button {
+    position: relative;
+    right: 400px;
+}
+
+.separator {
+    padding-top: 10px;
+    border-bottom: 1px solid red;
+    margin-bottom: 10px;
+}
+
+.convo-identifier {
+    background: transparent;
+    color: antiquewhite;
+    border: 2px solid rgb(246, 246, 249);
+    width: 235px;
+    height: 50px;
+    border-radius: 7px;
+    margin-left: 0.5vw;
+    margin-top: 1vh;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    text-align: center;
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+.convo-identifier:hover{
+    background-color: rgb(203, 136, 136);
+}
+
+h4 {
+    color: white;
+    display: flex;
+    justify-content: center;
 }

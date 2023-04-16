@@ -7,7 +7,7 @@ const ChatResponse = (props) => {
     const { question } = props; 
     
     useEffect(() => {
-        const generateResponse = async (q) => {
+        const generateResponse = async (question) => {
             //We send in a POST Request to Express Server to get a response from OpenAI API
             setLoading(true);
             const response = await fetch('http://localhost:4000', {
@@ -15,7 +15,7 @@ const ChatResponse = (props) => {
                 headers: {
                     "Content-Type": "application/json",
                 },
-                body: JSON.stringify({prompt : q}),
+                body: JSON.stringify({prompt : question}),
             })
             const answer = await response.json();
             setResponse(answer.answer.text); 
