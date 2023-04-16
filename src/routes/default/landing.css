@@ -3,7 +3,7 @@ body {
 }
   
 .menu {
-    width: 13.5vw;
+    width: 18vw;
     height: 100vh;
     background: rgb(30, 32, 35);
     float: left;
@@ -20,7 +20,7 @@ body {
     background: transparent;
     color: antiquewhite;
     border: 2px solid rgb(52, 53, 65);
-    width: 235px;
+    width: 15vw;
     height: 50px;
     border-radius: 7px;
     margin-left: 0.5vw;
@@ -62,7 +62,7 @@ textarea {
     bottom: 1rem;
     transition: all 0.15s ease;
     background-color: transparent;
-    right: 170px;
+    right: 4.7vw;
     margin-bottom: 3.5rem;
 }
 
@@ -90,7 +90,7 @@ textarea {
     background: transparent;
     color: antiquewhite;
     border: 2px solid rgb(246, 246, 249);
-    width: 235px;
+    width: 15vw;
     height: 50px;
     border-radius: 7px;
     margin-left: 0.5vw;
@@ -116,7 +116,7 @@ h4 {
     background: transparent;
     color: antiquewhite;
     border: 2px solid rgb(167, 106, 199);
-    width: 235px;
+    width: 15vw;
     height: 50px;
     border-radius: 7px;
     margin-left: 0.5vw;
