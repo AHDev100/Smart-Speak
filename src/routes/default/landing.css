@@ -111,3 +111,23 @@ h4 {
     display: flex;
     justify-content: center;
 }
+
+.mic-option {
+    background: transparent;
+    color: antiquewhite;
+    border: 2px solid rgb(167, 106, 199);
+    width: 235px;
+    height: 50px;
+    border-radius: 7px;
+    margin-left: 0.5vw;
+    margin-top: 1vh;
+    cursor: pointer;
+    transition: background-color 0.2s ease-in-out;
+    text-align: center;
+    padding-left: 15px;
+    font-size: 15px;
+}
+
+.mic-option:hover{
+    background-color: rgb(16, 41, 201);
+}

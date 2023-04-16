@@ -1,4 +1,3 @@
-import './voice.css'; 
 import Dictaphone from './dictaphone';
 
 const Voice = () => {
