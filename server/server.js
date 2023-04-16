@@ -24,6 +24,7 @@ app.post('/', async (req, res) => {
         max_tokens: 500,
     });
 
+    //Response Message Sent Back to Client-Side
     const answer = response.data.choices[0]; 
     res.status(200).json({answer}); 
   }
